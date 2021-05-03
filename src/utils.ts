@@ -103,7 +103,7 @@ export function matchRoute(context: QContext, route: Route): false | Match {
   } else {
     pattern = route.path;
   }
-  const regexp = new RegExp(pattern, MATCH_REGEXP_FLAGS);
+  const regexp = new RegExp(pattern);
   const match = current.match(regexp);
 
   if (match) {
